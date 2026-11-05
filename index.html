@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blood Donation Finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <h1>Find a blood donor near you.</h1>
+    <p>Pick a blood group and city. Call a donor who is available right now.</p>
+    <form id="searchForm" class="search">
+      <label>Blood group
+        <select id="group">
+          <option value="">Any</option>
+          <option>A+</option><option>A-</option><option>B+</option><option>B-</option>
+          <option>AB+</option><option>AB-</option><option>O+</option><option>O-</option>
+        </select>
+      </label>
+      <label>City
+        <select id="city"><option value="">All cities</option></select>
+      </label>
+      <label class="check"><input type="checkbox" id="availableOnly" checked> Available only</label>
+    </form>
+  </header>
+
+  <main>
+    <section>
+      <h2 id="count">Donors</h2>
+      <ul id="results" class="results"></ul>
+      <p id="empty" class="empty" hidden>No donors match. Try another city or blood group.</p>
+    </section>
+
+    <section class="register">
+      <h2>Become a donor</h2>
+      <form id="donorForm">
+        <input id="name" placeholder="Full name" required>
+        <select id="rGroup" required>
+          <option value="">Blood group</option>
+          <option>A+</option><option>A-</option><option>B+</option><option>B-</option>
+          <option>AB+</option><option>AB-</option><option>O+</option><option>O-</option>
+        </select>
+        <input id="rCity" placeholder="City" required>
+        <input id="phone" type="tel" placeholder="Phone number" pattern="[0-9]{10}" title="10 digit number" required>
+        <button type="submit">Register as donor</button>
+      </form>
+      <p id="msg" role="status"></p>
+    </section>
+  </main>
+
+  <footer>Sample data only. In an emergency, contact your nearest blood bank.</footer>
+  <script src="script.js"></script>
+</body>
+</html>

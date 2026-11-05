@@ -1,0 +1,30 @@
+:root{--bg:#f6f7f9;--ink:#1b1f2a;--muted:#5d6472;--red:#b3122b;--rose:#fbe7ea;--line:#dfe2e8;--ok:#1d7a4d}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Bricolage Grotesque",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+.hero{background:var(--red);color:#fff;padding:56px 20px 72px}
+.hero h1{font-size:clamp(2rem,6vw,3.6rem);font-weight:800;line-height:1.05;margin:0 auto 12px;max-width:760px;letter-spacing:-.02em}
+.hero p{max-width:760px;margin:0 auto 28px;opacity:.92}
+.search{max-width:760px;margin:0 auto;display:flex;flex-wrap:wrap;gap:14px;align-items:end}
+.search label{display:flex;flex-direction:column;font-size:.85rem;gap:4px;flex:1 1 160px}
+.search .check{flex-direction:row;align-items:center;gap:8px;flex:0 0 auto;padding-bottom:10px}
+select,input{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+main{max-width:760px;margin:-36px auto 0;padding:0 20px 40px}
+section{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;margin-bottom:24px}
+h2{margin:0 0 16px;font-size:1.25rem}
+.results{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.donor{display:grid;grid-template-columns:56px 1fr auto;gap:14px;align-items:center;padding:14px;border:1px solid var(--line);border-radius:10px}
+.badge{width:56px;height:56px;border-radius:50%;background:var(--rose);color:var(--red);display:grid;place-items:center;font-weight:800;font-size:1.1rem}
+.donor strong{display:block}
+.meta{color:var(--muted);font-size:.9rem}
+.status{font-size:.8rem;font-weight:600}
+.status.on{color:var(--ok)}.status.off{color:var(--muted)}
+.call{background:var(--red);color:#fff;text-decoration:none;padding:9px 16px;border-radius:8px;font-weight:600}
+.call.disabled{background:var(--line);color:var(--muted);pointer-events:none}
+.empty{color:var(--muted)}
+.register form{display:grid;gap:12px}
+button{font:inherit;font-weight:600;background:var(--ink);color:#fff;border:0;border-radius:8px;padding:12px;cursor:pointer}
+button:hover{background:#000}
+:focus-visible{outline:3px solid #ffb703;outline-offset:2px}
+#msg{margin:12px 0 0;color:var(--ok);font-weight:600}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:0 20px 32px}
+@media(max-width:520px){.donor{grid-template-columns:48px 1fr}.donor .call{grid-column:1/-1;text-align:center}}
